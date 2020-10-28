@@ -50,7 +50,7 @@ public class lowestCommonAncestor{
     } 
     
 
-     private boolean findPath(Node root, int n, List<Integer> path) {
+     boolean findPath(Node root, int n, List<Integer> path) {
 
         
         if (root == null) {
