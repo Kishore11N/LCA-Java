@@ -4,3 +4,5 @@ However, the Python implementation has since been moved to a seperate repository
 Both implementations were placed in the first repository that has since been renamed to "LCA-Java" before the deadline.
 
 The Directed Acyclic Graph has been implemented in the lowestCommonAncestor file and its tests are in the lowestCommonAncestorTest file within this repository.
+
+Metrics Report was already submitted to BlackBoard before deadline.
