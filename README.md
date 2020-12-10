@@ -5,4 +5,4 @@ Both implementations were placed in the first repository that has since been ren
 
 The Directed Acyclic Graph has been implemented in the lowestCommonAncestor file and its tests are in the lowestCommonAncestorTest file within this repository.
 
-Metrics Report was already submitted to BlackBoard before deadline.
+Metrics Report was already submitted to BlackBoard before deadline, however it was only added to the repository past the due date.
