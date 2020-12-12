@@ -42,15 +42,20 @@ def validate():
 
     return [validDetails,access_token,user_github,repoName]
 
-valid = validate()
-isValid = valid[0]
-access_token = valid[1]
-user_github = valid[2]
-repoName = valid[3]
 
-if isValid == True:
-    g = Github(access_token)
-    user = g.get_user(user_github)
-    for repo in user.get_repos():
-        print(repo.name)
-    
+def getInformation():
+
+    valid = validate()
+    isValid = valid[0]
+    access_token = valid[1]
+    user_github = valid[2]
+    repoName = valid[3]
+
+    if isValid == True:
+        g = Github(access_token)
+        user = g.get_user(user_github)
+        for repo in user.get_repos():
+            print(repo.name)
+        
+
+getInformation()
