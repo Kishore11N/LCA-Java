@@ -1,7 +1,10 @@
+from flask import Flask, flash, redirect, render_template, request, session, abort,send_from_directory,send_file,jsonify
 from github import Github
 from pprint import pprint
 import json
 
+
+# Validate function to ensure authorised person is viewing the repositories and that the inputs are valid
 def validate():
 
     validDetails = False
@@ -43,7 +46,7 @@ def validate():
 
     return [validDetails,access_token,user_github,repoName]
 
-
+#This function gets the relevant information using the inputs provided by the user
 def getAllRepos(repo):
   numOfRepos = []
   contributor_names = []
@@ -66,7 +69,7 @@ def getAllRepos(repo):
     no0fContributions.append(contributionTime)
     numOfRepos.append(str(repoCounter))
     
-  #returns a list containing three lists regarding information about committers of a repo
+#Returns a list containing three lists regarding information about the contributors of a repo
   return [contributor_names,no0fContributions,numOfRepos]
 
 
@@ -76,7 +79,7 @@ access_token = valid[1]
 user_github = valid[2]
 repoName = valid[3]
 
-
+#If all inputs are validated, then collect required information
 if isValid == True:
     g = Github(access_token)
     user = g.get_user(user_github)
@@ -88,12 +91,13 @@ if isValid == True:
            experience = info[2]       
            data = []
 
-           for cr, cn, rn in zip(contributors, commits, experience):
-            personInfo = {'person': {'login': cr, 'contributions': cn, 'repoNum': rn}}
-            data.append(personInfo)
+#Place information into a dictionary
+for cr, cn, rn in zip(contributors, commits, experience):
+  personInfo = {'name': cr, 'commits': cn, 'repos': rn}
+  data.append(personInfo)
 
-            y = json.dumps(data)
-            pprint(y)
-            
-         
+#Convert data into JSON format
+y = json.dumps(data)
+print(y)
+
 
