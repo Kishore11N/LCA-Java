@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load the D3.js files -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div for the scatterplot -->
+<div id="my_visual"></div>
+
+<body>
+  <script>
+
+// The margins of the visual 
+var margin = {top: 10, right: 30, bottom: 50, left: 80},
+    width = 1000- margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
+
+// Append the SVG object to the div 
+var svg = d3.select("#my_visual")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+  // Simple text on the div     
+  d3.select("#my_visual")
+    .text("hello world");
+    
+    </script>
+</body>
+</html>
