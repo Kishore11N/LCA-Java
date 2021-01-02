@@ -2,6 +2,7 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 from github import Github
 from pprint import pprint
 import json
+import csv
 
 
 # Validate function to ensure authorised person is viewing the repositories and that the inputs are valid
@@ -91,13 +92,22 @@ if isValid == True:
            experience = info[2]       
            data = []
 
-#Place information into a dictionary
+# Create a dictionary of values
 for cr, cn, rn in zip(contributors, commits, experience):
   personInfo = {'name': cr, 'commits': cn, 'repos': rn}
   data.append(personInfo)
 
-#Convert data into JSON format
-y = json.dumps(data)
-print(y)
+keys = data[0].keys()
 
+# Write information to a csv file
+with open('people.csv', 'w', newline='')  as output_file:
+    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer.writeheader()
+    dict_writer.writerows(data)
+
+# Reading the csv file that was created
+with open('people.csv', newline='') as File:  
+    reader = csv.reader(File)
+    for row in reader:
+        print(row)
 
