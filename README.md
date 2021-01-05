@@ -22,6 +22,10 @@ If you go to line 28 of the html file and change the name from "data1.csv" to "d
 ![](Screenshots/Visual%20Line.jpg)
 
 
+First test file - data1.csv   
+![](Screenshots/Test1%20Visual.jpg)  
 
 
 
+Second test file - data2.csv
+![](Screenshots/Test2%20Visual.jpg)  
