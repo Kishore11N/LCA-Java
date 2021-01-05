@@ -34,7 +34,52 @@ data.forEach(function(d) {
   var maxCommit = d3.max(data, function(d) { return d.column1; });
   var maxRepo = d3.max(data, function(d) { return d.column2; });
 
-          })
+// Add X axis
+var x = d3.scaleLinear()
+    .domain([0, maxCommit])
+    .range([ 0, width ]);
+    svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+    svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width - 400)
+    .attr("y", height + 30)
+    .text("commits");
+
+
+    // Add Y axis
+  var y = d3.scaleLinear()
+  .domain([0, maxRepo])
+  .range([ height, 0]);
+  svg.append("g")
+  .call(d3.axisLeft(y));
+
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("x", -330)
+    .attr("y", -60)
+    .attr("dy", "1em")
+    .attr("transform", "rotate(-90)")
+    .text("repos");
+
+
+   // Add dots
+   svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.commits); } )
+      .attr("cy", function (d) { return y(d.repos); } )
+      .attr("r", 2.5)
+      .attr("fill", function(d) {
+     return "rgb("+d.commits + ","+ d.repos + ",0)" } )
+})
+  
     
     </script>
 </body>
