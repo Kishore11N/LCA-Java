@@ -1,8 +1,27 @@
 # LCA-Java
-Initially both Java and Python implementations of the LCA Assignment were placed in one repository.
-However, the Python implementation has since been moved to a seperate repository at "https://github.com/Kishore11N/LCA-Python".
-Both implementations were placed in the first repository that has since been renamed to "LCA-Java" before the deadline.
+LCA & DAG implementation in Java - LCA-Java Folder   
+LCA implementation in Python - "https://github.com/Kishore11N/LCA-Python"
 
-The Directed Acyclic Graph has been implemented in the lowestCommonAncestor file and its tests are in the lowestCommonAncestorTest file within this repository.
+Test file for LCA & DAG in Java - LCA Java Folder  
+Test file for LCA in Python - "https://github.com/Kishore11N/LCA-Python"
 
-Metrics Report was already submitted to BlackBoard before deadline, however it was only added to the repository past the due date.
+Biography and Metrics Report within this repositiory.  
+Metrics report was submitted to BlackBoard before deadline, and was added to the repository at a later stage.
+
+
+
+D3.js Visualisation  
+
+1. In order to run the visual, you must have Python3 installed.  
+2. Open the terminal and switch to the directory of the folder.  
+3. Then type the following command : python -m http.server  
+4. Then in your web browser, you should type the localhost provided. (E.g. localhost:8000)    
+
+I have provided two csv files within the folder that you can test using the html file.  
+If you go to line 28 of the html file and change the name from "data1.csv" to "data2.csv" you can test the two files.  
+
+
+
+
+
+
