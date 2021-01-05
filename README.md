@@ -19,7 +19,7 @@ D3.js Visualisation
 
 I have provided two csv files within the folder that you can test using the html file.  
 If you go to line 28 of the html file and change the name from "data1.csv" to "data2.csv" you can test the two files.  
-
+![](Screenshots/Visual%20Line.jpg)
 
 
 
