@@ -80,6 +80,7 @@ access_token = valid[1]
 user_github = valid[2]
 repoName = valid[3]
 
+
 #If all inputs are validated, then collect required information
 if isValid == True:
     g = Github(access_token)
@@ -92,12 +93,12 @@ if isValid == True:
            experience = info[2]       
            data = []
 
-# Create a dictionary of values
-for cr, cn, rn in zip(contributors, commits, experience):
-  personInfo = {'name': cr, 'commits': cn, 'repos': rn}
-  data.append(personInfo)
+    # Create a dictionary of values
+    for cr, cn, rn in zip(contributors, commits, experience):
+        personInfo = {'name': cr, 'commits': cn, 'repos': rn}
+        data.append(personInfo)
 
-keys = data[0].keys()
+        keys = data[0].keys()
 
 # Write information to a csv file
 with open('people.csv', 'w', newline='')  as output_file:
