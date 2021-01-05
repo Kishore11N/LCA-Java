@@ -2,17 +2,26 @@
 LCA & DAG implementation in Java - LCA-Java Folder   
 LCA implementation in Python - "https://github.com/Kishore11N/LCA-Python"
 
+
+
 Test file for LCA & DAG in Java - LCA Java Folder  
 Test file for LCA in Python - "https://github.com/Kishore11N/LCA-Python"
 
+
+
 Biography and Metrics Report within this repositiory.  
 Metrics report was submitted to BlackBoard before deadline, and was added to the repository at a later stage.
+
+
 
 GitHub Access - Git Access Folder  
 My Git Access code interrogates the API to collect information from a user's repository to find : 
  - The name of each contributor
  - The number of commits/contributions each contributor made
- - The number of repositories each of the contributors worked on
+ - The number of repositories each of the contributors worked on  
+ The output of my code is a csv file, that can then be used as an input in the D3.js visual.
+ 
+
 
 D3.js Visualisation    
 
