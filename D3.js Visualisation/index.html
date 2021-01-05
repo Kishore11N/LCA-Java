@@ -24,13 +24,14 @@ var svg = d3.select("#my_visual")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-          d3.csv("info.csv", function(data) {
+          d3.csv("data.csv", function(data) {
 
 data.forEach(function(d) {
     d.column1 = +d.commits;
     d.column2 = +d.repos;
 });
 
+// THe maximum commit value and the maximum number of repos a user has determines the scales of the visual.
   var maxCommit = d3.max(data, function(d) { return d.column1; });
   var maxRepo = d3.max(data, function(d) { return d.column2; });
 
