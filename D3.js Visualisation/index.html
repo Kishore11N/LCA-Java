@@ -24,9 +24,17 @@ var svg = d3.select("#my_visual")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-  // Simple text on the div     
-  d3.select("#my_visual")
-    .text("hello world");
+          d3.csv("info.csv", function(data) {
+
+data.forEach(function(d) {
+    d.column1 = +d.commits;
+    d.column2 = +d.repos;
+});
+
+  var maxCommit = d3.max(data, function(d) { return d.column1; });
+  var maxRepo = d3.max(data, function(d) { return d.column2; });
+
+          })
     
     </script>
 </body>
