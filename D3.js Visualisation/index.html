@@ -24,7 +24,7 @@ var svg = d3.select("#my_visual")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-          d3.csv("data1.csv", function(data) {
+          d3.csv("data2.csv", function(data) {
 
 data.forEach(function(d) {
     d.column1 = +d.commits;
