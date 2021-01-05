@@ -19,7 +19,7 @@ My Git Access code interrogates the API to collect information from a user's rep
  - The name of each contributor
  - The number of commits/contributions each contributor made
  - The number of repositories each of the contributors worked on  
- The output of my code is a csv file, that can then be used as an input in the D3.js visual.
+ The output of my code is a csv file, that can then be used as an input in the D3.js visualisation.
  
 
 
